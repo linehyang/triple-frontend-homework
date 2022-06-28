@@ -8,8 +8,8 @@ import Award from '../components/Award'
 
 const Sectioncontainer = styled.section`
   position: relative;
+  overflow: hidden;
 `
-
 const SectionHeading = styled.h2`
   position: absolute;
   width: 1px;
@@ -17,6 +17,12 @@ const SectionHeading = styled.h2`
   margin: -1px;
   overflow: hidden;
   clip-path: polygon(0 0, 0 0, 0 0);
+`
+const ContentContainer = styled.div`
+  position: relative;
+  width: 1040px;
+  height: auto;
+  margin: 0 auto;
 `
 
 const Home: NextPage = () => {
@@ -27,10 +33,12 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Sectioncontainer>
-          <SectionHeading>트리플 어워드 및 통계</SectionHeading>
-          <TitleLogo />
-          <Statistics />
-          <Award />
+          <SectionHeading>Triple Award & Statistics</SectionHeading>
+          <ContentContainer>
+            <TitleLogo />
+            <Statistics />
+            <Award />
+          </ContentContainer>
         </Sectioncontainer>
       </main>
     </>

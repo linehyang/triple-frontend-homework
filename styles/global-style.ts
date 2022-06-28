@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     min-width: 1200px;
     background-color: #ffffff;
     font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI;
+    font-size : 16px;
     color: rgb(58, 58, 58);
   }
 
