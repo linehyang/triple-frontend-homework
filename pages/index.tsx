@@ -3,7 +3,7 @@ import Head from 'next/head'
 import styled from 'styled-components'
 
 import TitleLogo from '../components/TitleLogo'
-import Statistics from '../components/Statistics'
+import Indicator from '../components/Indicator'
 import Award from '../components/Award'
 
 const Sectioncontainer = styled.section`
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           <SectionHeading>Triple Award & Statistics</SectionHeading>
           <ContentContainer>
             <TitleLogo />
-            <Statistics />
+            <Indicator />
             <Award />
           </ContentContainer>
         </Sectioncontainer>

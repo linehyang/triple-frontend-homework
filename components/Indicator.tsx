@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-const StatisticsContainer = styled.div`
+const IndicatorContainer = styled.div`
   margin-left: 623px;
   padding-top: 150px;
 `
 
-const StatisticsContent = styled.div`
+const IndicatorContent = styled.div`
   margin-bottom: 20px;
   font-family: sans-serif;
   font-size: 36px;
@@ -16,29 +16,29 @@ const StatisticsContent = styled.div`
   }
 `
 
-const Statistics = () => {
+const Indicator = () => {
   return (
-    <StatisticsContainer>
-      <StatisticsContent>
+    <IndicatorContainer>
+      <IndicatorContent>
         <strong>
           <span>700</span>만 명
         </strong>
         의 여행자
-      </StatisticsContent>
-      <StatisticsContent>
+      </IndicatorContent>
+      <IndicatorContent>
         <strong>
           <span>100</span>만 개
         </strong>
         의 여행 리뷰
-      </StatisticsContent>
-      <StatisticsContent>
+      </IndicatorContent>
+      <IndicatorContent>
         <strong>
           <span>470</span>만 개
         </strong>
         의 여행 일정
-      </StatisticsContent>
-    </StatisticsContainer>
+      </IndicatorContent>
+    </IndicatorContainer>
   )
 }
 
-export default Statistics
+export default Indicator
