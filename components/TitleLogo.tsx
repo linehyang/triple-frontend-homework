@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
-const TitleLogoContainer = styled.div`
+import useFadeInUp from '../hooks/useFadeInUp'
+import { useFadeInUpType } from '../types/typeofUseFadeInUp'
+
+const TitleLogoContainer = styled.div<useFadeInUpType>`
   position: absolute;
   top: 150px;
   width: 400px;
@@ -13,10 +16,19 @@ const TitleLogoContainer = styled.div`
   background-size: 400px 338px;
   background-image: url('triple2x.png');
   background-repeat: no-repeat;
+  opacity: ${(props) => (props.isLoading ? '1' : '0')};
+  transform: translateY(${(props) => (props.isLoading ? '0' : '10px')});
+  transition: all 700ms ease-out;
 `
 
 const TitleLogo = () => {
-  return <TitleLogoContainer>2021년 12월 기준</TitleLogoContainer>
+  const isLoading = useFadeInUp(false)
+
+  return (
+    <TitleLogoContainer isLoading={isLoading}>
+      2021년 12월 기준
+    </TitleLogoContainer>
+  )
 }
 
 export default TitleLogo

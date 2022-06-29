@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 
-const AwardContainer = styled.div`
+import useFadeInUp from '../hooks/useFadeInUp'
+import { useFadeInUpType } from '../types/typeofUseFadeInUp'
+
+const AwardContainer = styled.div<useFadeInUpType>`
   margin: 50px 0px 140px 623px;
   white-space: nowrap;
+  opacity: ${(props) => (props.isLoading ? '1' : '0')};
+  transform: translateY(${(props) => (props.isLoading ? '0' : '10px')});
+  transition: all 700ms ease-out 200ms;
 `
 
 const AwardContent = styled.div`
@@ -29,8 +35,10 @@ const AppleAward = styled(AwardContent)`
 `
 
 const Award = () => {
+  const isLoading = useFadeInUp(false)
+
   return (
-    <AwardContainer>
+    <AwardContainer isLoading={isLoading}>
       <GoogleAward>
         2018 구글 플레이스토어
         <br />
