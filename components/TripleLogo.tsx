@@ -12,7 +12,7 @@ const TitleLogoContainer = styled.div<useFadeInUpType>`
   font-family: sans-serif;
   font-size: 15px;
   text-align: center;
-  color: rgba(58, 58, 58, 0.7);
+  color: ${(props) => props.theme.colors.logo_black};
   background-size: 400px 338px;
   background-image: url('triple2x.png');
   background-repeat: no-repeat;

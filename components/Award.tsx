@@ -20,7 +20,7 @@ const AwardContent = styled.div`
   font-size: 14px;
   font-weight: bold;
   line-height: 22px;
-  color: rgba(58, 58, 58, 0.8);
+  color: ${(props) => props.theme.colors.award_black};
   background-size: 54px 54px;
   background-position: left top;
   background-repeat: no-repeat;
