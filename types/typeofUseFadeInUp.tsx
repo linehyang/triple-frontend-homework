@@ -1,3 +1,3 @@
 export interface useFadeInUpType {
-  isLoading: boolean
+  isRender: boolean
 }

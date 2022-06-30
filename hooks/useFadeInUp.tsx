@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react'
 
 const useFadeInUp = (initailValue: boolean) => {
-  const [isLoading, setIsLoading] = useState(initailValue)
+  const [isRender, setIsRender] = useState(initailValue)
 
   useEffect(() => {
-    if (!initailValue) setIsLoading(() => !isLoading)
+    if (!initailValue) setIsRender(() => !isRender)
     else {
-      setIsLoading(() => !isLoading)
+      setIsRender(() => !isRender)
     }
   }, [])
 
-  return isLoading
+  return isRender
 }
 
 export default useFadeInUp

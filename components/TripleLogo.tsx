@@ -16,16 +16,16 @@ const TitleLogoContainer = styled.div<useFadeInUpType>`
   background-size: 400px 338px;
   background-image: url('triple2x.png');
   background-repeat: no-repeat;
-  opacity: ${(props) => (props.isLoading ? '1' : '0')};
-  transform: translateY(${(props) => (props.isLoading ? '0' : '10px')});
+  opacity: ${(props) => (props.isRender ? '1' : '0')};
+  transform: translateY(${(props) => (props.isRender ? '0' : '10px')});
   transition: all 700ms ease-out;
 `
 
 const TitleLogo = () => {
-  const isLoading = useFadeInUp(false)
+  const isRender = useFadeInUp(false)
 
   return (
-    <TitleLogoContainer isLoading={isLoading}>
+    <TitleLogoContainer isRender={isRender}>
       2021년 12월 기준
     </TitleLogoContainer>
   )

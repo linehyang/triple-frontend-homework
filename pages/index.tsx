@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styled from 'styled-components'
 
-import TitleLogo from '../components/TitleLogo'
+import TitleLogo from '../components/TripleLogo'
 import Indicator from '../components/Indicator'
 import Award from '../components/Award'
 

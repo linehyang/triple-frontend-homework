@@ -7,8 +7,8 @@ import { useFadeInUpType } from '../types/typeofUseFadeInUp'
 const IndicatorContainer = styled.div<useFadeInUpType>`
   margin-left: 623px;
   padding-top: 150px;
-  opacity: ${(props) => (props.isLoading ? '1' : '0')};
-  transform: translateY(${(props) => (props.isLoading ? '0' : '10px')});
+  opacity: ${(props) => (props.isRender ? '1' : '0')};
+  transform: translateY(${(props) => (props.isRender ? '0' : '10px')});
   transition: all 700ms ease-out 100ms;
 `
 
@@ -27,13 +27,13 @@ const IndicatorContent = styled.div`
 `
 
 const Indicator = () => {
-  const isLoading = useFadeInUp(false)
+  const isRender = useFadeInUp(false)
   const traveler = useCountUp(700)
   const review = useCountUp(100)
   const schedule = useCountUp(470)
 
   return (
-    <IndicatorContainer isLoading={isLoading}>
+    <IndicatorContainer isRender={isRender}>
       <IndicatorContent>
         <strong>
           <span>{traveler}</span>만 명
