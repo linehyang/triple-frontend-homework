@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import useFadeInUp from '../hooks/useFadeInUp'
+import useCountUp from '../hooks/useCountUp'
 import { useFadeInUpType } from '../types/typeofUseFadeInUp'
 
 const IndicatorContainer = styled.div<useFadeInUpType>`
@@ -27,24 +28,27 @@ const IndicatorContent = styled.div`
 
 const Indicator = () => {
   const isLoading = useFadeInUp(false)
+  const traveler = useCountUp(700)
+  const review = useCountUp(100)
+  const schedule = useCountUp(470)
 
   return (
     <IndicatorContainer isLoading={isLoading}>
       <IndicatorContent>
         <strong>
-          <span>700</span>만 명
+          <span>{traveler}</span>만 명
         </strong>
         의 여행자
       </IndicatorContent>
       <IndicatorContent>
         <strong>
-          <span>100</span>만 개
+          <span>{review}</span>만 개
         </strong>
         의 여행 리뷰
       </IndicatorContent>
       <IndicatorContent>
         <strong>
-          <span>470</span>만 개
+          <span>{schedule}</span>만 개
         </strong>
         의 여행 일정
       </IndicatorContent>
