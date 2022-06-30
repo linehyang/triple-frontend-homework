@@ -1,23 +1,29 @@
 import { useState, useEffect, useRef } from 'react'
 
-import { easeOutCirc } from '../utils/easeOutCirc'
+//reference : https://easings.net/#easeOutCirc
+const easeOutCirc = (x: number) => {
+  return Math.sqrt(1 - Math.pow(x - 1, 2))
+}
 
-const useCountUp = (end: number, duration = 2000) => {
+const DEFAULT_DURATION = 2000
+
+const useCountUp = (maxiumValue: number, duration = DEFAULT_DURATION) => {
   const [count, setCount] = useState(0)
-  let start: number
+  const requestRef = useRef(0)
 
-  const requestRef = useRef<number>(0)
+  let startTime: number
 
   const animate = (time: DOMHighResTimeStamp) => {
-    if (start === undefined) {
-      start = time
+    if (startTime === undefined) {
+      startTime = time
     }
 
-    const elapsed = time - start
-    const progress = easeOutCirc(elapsed / duration)
-    if (elapsed <= duration) {
+    const elapsedTime = time - startTime
+    const progress = easeOutCirc(elapsedTime / duration)
+
+    if (elapsedTime <= duration) {
       setCount(() => {
-        return progress * end
+        return progress * maxiumValue
       })
     }
 

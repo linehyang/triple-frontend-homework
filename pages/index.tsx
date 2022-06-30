@@ -2,26 +2,19 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styled from 'styled-components'
 
-import TitleLogo from '../components/TripleLogo'
-import Indicator from '../components/Indicator'
-import Award from '../components/Award'
+import TripleLogo from '../components/TripleLogo'
+import Metrics from '../components/Metrics'
+import Awards from '../components/Awards'
+import VisuallyHidden from '../components/VisuallyHidden'
 
-const Sectioncontainer = styled.section`
+const SectionContainer = styled.section`
   position: relative;
   overflow: hidden;
 `
-const SectionHeading = styled.h2`
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: polygon(0 0, 0 0, 0 0);
-`
+
 const ContentContainer = styled.div`
   position: relative;
   width: 1040px;
-  height: auto;
   margin: 0 auto;
 `
 
@@ -32,14 +25,19 @@ const Home: NextPage = () => {
         <title>Triple Frontend Homework</title>
       </Head>
       <main>
-        <Sectioncontainer>
-          <SectionHeading>Triple Award & Statistics</SectionHeading>
+        <VisuallyHidden>
+          <h1>여행의 모든 것 트리플로 한 번에</h1>
+        </VisuallyHidden>
+        <SectionContainer>
+          <VisuallyHidden>
+            <h2>Triple Award & Statistics</h2>
+          </VisuallyHidden>
           <ContentContainer>
-            <TitleLogo />
-            <Indicator />
-            <Award />
+            <TripleLogo />
+            <Metrics />
+            <Awards />
           </ContentContainer>
-        </Sectioncontainer>
+        </SectionContainer>
       </main>
     </>
   )
