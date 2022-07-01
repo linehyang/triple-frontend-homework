@@ -21,6 +21,9 @@
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "devDependencies": {
     "@titicaca/eslint-config-triple": "^3.1.0",
     "@types/node": "18.0.0",
