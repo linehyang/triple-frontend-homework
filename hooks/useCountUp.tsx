@@ -25,6 +25,8 @@ const useCountUp = (maxiumValue: number, duration = DEFAULT_DURATION) => {
       setCount(() => {
         return progress * maxiumValue
       })
+    } else {
+      return
     }
 
     requestRef.current = requestAnimationFrame(animate)
