@@ -9,8 +9,11 @@
 ## 프로젝트 실행 방법
 
 ```bash
+*node version 16.0.0 이상에서 실행 필요
+
 $ npm install
 $ npm run dev
+
 ```
 
 --------
