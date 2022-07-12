@@ -48,7 +48,7 @@ $ npm run dev
 ### 중복을 방지하고, 재사용 가능한 코드 작성
   - 좌측 이미지, 지표, 수상 내역들이 mount 되었을 때 애니메이션을 적용하기 위해, [`useMounted`](https://github.com/linehyang/triple-frontend-homework/blob/main/hooks/useMounted.tsx) 커스텀 훅 작성
   - 증가 속도가 느려지는 숫자를 재사용하기 위해 [`useCountUp`](https://github.com/linehyang/triple-frontend-homework/blob/main/hooks/useCountUp.tsx) 커스텀 훅 작성
-  - 영역별 등장 애니메이션을 재사용하기 위해 [`fadeInUp`](https://github.com/linehyang/triple-frontend-homework/blob/main/styles/animation.ts) 적송
+  - 영역별 등장 애니메이션을 재사용하기 위해 [`fadeInUp`](https://github.com/linehyang/triple-frontend-homework/blob/main/styles/animation.ts) 적용
 
 ### 컨벤션
 - 일관된 커밋 규칙
