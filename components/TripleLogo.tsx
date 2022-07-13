@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 import { useMounted } from '../hooks/useMounted'
 import type { UseMountedReturnType } from '../hooks/useMounted'
-
 import { fadeInUp } from '../styles/animation'
 
 const TitleLogoContainer = styled.div<UseMountedReturnType>`

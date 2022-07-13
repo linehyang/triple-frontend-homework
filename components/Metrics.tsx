@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { useMounted } from '../hooks/useMounted'
 import type { UseMountedReturnType } from '../hooks/useMounted'
 import useCountUp from '../hooks/useCountUp'
-
 import { fadeInUp } from '../styles/animation'
 
 const MetricsContainer = styled.ul<UseMountedReturnType>`
