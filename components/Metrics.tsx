@@ -47,3 +47,58 @@ const Metrics = () => {
 }
 
 export default Metrics
+
+// import { useState, useEffect } from "react";
+// import styled from "styled-components";
+
+// import { useMounted } from "./useMounted";
+// import type { UseMountedReturnType } from "./useMounted";
+// import useCountUp from "./useCountUp";
+
+// const MetricsContainer = styled.ul<UseMountedReturnType>`
+//   margin-left: 0;
+//   padding-top: 0;
+// `;
+
+// const MetricItem = styled.li`
+//   margin-bottom: 20px;
+//   font-size: 36px;
+//   letter-spacing: -1px;
+//   & strong {
+//     font-weight: bold;
+//   }
+// `;
+
+// const MAXIMUM_TRAVELER_COUNT = 700;
+// const MAXIMUM_REVIEW_COUNT = 100;
+// const MAXIMUM_SCHEDULE_COUNT = 470;
+
+// const Metrics = () => {
+//   const [travelersCount, setTravelersCount] = useState(MAXIMUM_TRAVELER_COUNT);
+//   const isMounted = useMounted();
+//   const travelerCount = useCountUp(travelersCount);
+//   const reviewCount = useCountUp(MAXIMUM_REVIEW_COUNT);
+//   const scheduleCount = useCountUp(MAXIMUM_SCHEDULE_COUNT);
+
+//   return (
+//     <MetricsContainer isMounted={isMounted}>
+//       <input
+//         value={travelersCount}
+//         onChange={(e) => {
+//           setTravelersCount(parseInt(e.currentTarget.value || "0", 10));
+//         }}
+//       />
+//       <MetricItem>
+//         <strong>{travelerCount}만 명</strong>의 여행자
+//       </MetricItem>
+//       <MetricItem>
+//         <strong>{reviewCount}만 개</strong>의 여행 리뷰
+//       </MetricItem>
+//       <MetricItem>
+//         <strong>{scheduleCount}만 개</strong>의 여행 일정
+//       </MetricItem>
+//     </MetricsContainer>
+//   );
+// };
+
+// export default Metrics;
